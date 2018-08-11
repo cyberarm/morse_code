@@ -3,7 +3,8 @@ class Window < Gosu::Window
     super(250, 250, false)
     @animator = Animator.new(ARGV[0])
     # @font = Gosu::Font.new(48*2, font: "Consolas")
-    @font = Gosu::Font.new(self.height, font: "DejaVu Serif")
+    # @font = Gosu::Font.new(self.height, name: "DejaVu Serif")
+    @font = Gosu::Font.new(self.height, name: "Times New Roman")
     Thread.new do
       loop do
         @animator.animate

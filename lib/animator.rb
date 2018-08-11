@@ -21,6 +21,7 @@ class Animator
       end
 
       set = Code::CODE[char.upcase]
+      next if set == nil # Ignore unknown characters
 
       set.each do |code|
         @colour = @on

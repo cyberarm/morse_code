@@ -1,5 +1,5 @@
 class Code
-  DOT  = 100 # ms
+  DOT  = 250 # ms
   DASH = DOT*3
 
   SHORT= DOT*5
