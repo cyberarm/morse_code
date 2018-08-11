@@ -1,6 +1,10 @@
 class Window < Gosu::Window
   def initialize
-    super(250, 250, false)
+    if ARGV.join.include?("--native")
+      super(Gosu.screen_width, Gosu.screen_height, true)
+    else
+      super(250, 250, false)
+    end
     @animator = Animator.new(ARGV[0])
     # @font = Gosu::Font.new(48*2, font: "Consolas")
     # @font = Gosu::Font.new(self.height, name: "DejaVu Serif")
